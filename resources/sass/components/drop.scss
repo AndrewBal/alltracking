@@ -1,0 +1,20 @@
+$drop-z-index: $global-z-index + 20 !default;
+$drop-width: 300px !default;
+$drop-margin: $global-margin !default;
+
+.uk-drop {
+    display: none;
+    position: absolute;
+    z-index: $drop-z-index;
+    box-sizing: border-box;
+    width: $drop-width;
+}
+
+.uk-drop.uk-open { display: block; }
+
+[class*='uk-drop-top'] { margin-top: (-$drop-margin); }
+[class*='uk-drop-bottom'] { margin-top: $drop-margin; }
+[class*='uk-drop-left'] { margin-left: (-$drop-margin); }
+[class*='uk-drop-right'] { margin-left: $drop-margin; }
+
+.uk-drop-stack .uk-drop-grid > * { width: 100% !important; }

@@ -1,0 +1,65 @@
+$alert-margin-vertical: $global-margin !default;
+$alert-padding: $global-small-gutter !default;
+$alert-padding-right: $alert-padding + 14px !default;
+$alert-background: $global-muted-background !default;
+$alert-font-size: $global-small-font-size !default;
+$alert-color: $global-color !default;
+$alert-close-top: $alert-padding + 5px !default;
+$alert-close-right: $alert-padding !default;
+$alert-primary-background: lighten(mix(white, $global-primary-background, 40%), 20%) !default;
+$alert-primary-color: $global-primary-background !default;
+$alert-success-background: lighten(mix(white, $global-success-background, 40%), 25%) !default;
+$alert-success-color: $global-success-background !default;
+$alert-warning-background: lighten(mix(white, $global-warning-background, 45%), 15%) !default;
+$alert-warning-color: $global-warning-background !default;
+$alert-danger-background: lighten(mix(white, $global-danger-background, 40%), 20%) !default;
+$alert-danger-color: $global-danger-background !default;
+
+.uk-alert {
+    font-size: $alert-font-size;
+    line-height: 1.2;
+    position: relative;
+    margin-bottom: $alert-margin-vertical;
+    padding: $alert-padding $alert-padding-right $alert-padding $alert-padding;
+    background: $alert-background;
+    color: $alert-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%);
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+
+* + .uk-alert { margin-top: $alert-margin-vertical; }
+
+.uk-alert > :last-child { margin-bottom: 0; }
+
+.uk-alert-close {
+    position: absolute;
+    top: $alert-close-top;
+    right: $alert-close-right;
+}
+
+.uk-alert-close:first-child + * { margin-top: 0; }
+
+.uk-alert-close:hover,
+.uk-alert-close:focus {
+}
+
+.uk-alert-primary {
+    background: $alert-primary-background;
+    color: $alert-primary-color;
+}
+
+.uk-alert-success {
+    background: $alert-success-background;
+    color: $alert-success-color;
+}
+
+.uk-alert-warning {
+    background: $alert-warning-background;
+    color: $alert-warning-color;
+}
+
+.uk-alert-danger {
+    background: $alert-danger-background;
+    color: $alert-danger-color;
+}

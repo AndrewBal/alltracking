@@ -1,0 +1,52 @@
+$link-muted-color: $global-muted-color !default;
+$link-muted-hover-color: $global-color !default;
+
+$link-text-hover-color: $global-color !default;
+
+$link-heading-hover-color: $global-primary-background !default;
+$link-heading-hover-text-decoration: none !default;
+
+
+a.uk-link-muted,
+.uk-link-muted a {
+    color: $link-muted-color;
+}
+
+a.uk-link-muted:hover,
+.uk-link-muted a:hover,
+.uk-link-toggle:hover .uk-link-muted,
+.uk-link-toggle:focus .uk-link-muted {
+    color: $link-muted-hover-color;
+}
+
+a.uk-link-text,
+.uk-link-text a {
+    color: inherit;
+}
+
+a.uk-link-text:hover,
+.uk-link-text a:hover,
+.uk-link-toggle:hover .uk-link-text,
+.uk-link-toggle:focus .uk-link-text {
+    color: $link-text-hover-color;
+}
+
+a.uk-link-heading,
+.uk-link-heading a {
+    color: inherit;
+}
+
+a.uk-link-reset,
+.uk-link-reset a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.uk-link-toggle {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.uk-link-toggle:focus {
+    outline: none;
+}

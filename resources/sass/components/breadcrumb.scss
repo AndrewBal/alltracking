@@ -1,0 +1,44 @@
+$breadcrumb-item-font-size:                          $global-small-font-size !default;
+$breadcrumb-item-color:                              $global-muted-color !default;
+$breadcrumb-item-hover-color:                        $global-color !default;
+$breadcrumb-item-hover-text-decoration:              none !default;
+$breadcrumb-item-active-color:                       $global-color !default;
+
+$breadcrumb-divider:                                 "›" !default;
+$breadcrumb-divider-margin-horizontal:               10px !default;
+$breadcrumb-divider-color:                           $global-muted-color !default;
+
+.uk-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.uk-breadcrumb > * { flex: none; }
+
+.uk-breadcrumb > * > * {
+    display: inline-block;
+    font-size: $breadcrumb-item-font-size;
+    color: $breadcrumb-item-color;
+}
+
+.uk-breadcrumb > * > :hover,
+.uk-breadcrumb > * > :focus {
+    color: $breadcrumb-item-hover-color;
+    text-decoration: $breadcrumb-item-hover-text-decoration;
+}
+
+.uk-breadcrumb > .uk-disabled > * {
+}
+
+.uk-breadcrumb > :last-child > * {
+    color: $breadcrumb-item-active-color;
+}
+
+.uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+    content: $breadcrumb-divider;
+    display: inline-block;
+    margin: 0 $breadcrumb-divider-margin-horizontal;
+    color: $breadcrumb-divider-color;
+}

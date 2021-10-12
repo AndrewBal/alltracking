@@ -1,0 +1,113 @@
+[hidden],
+.uk-hidden {
+    display: none !important;
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .uk-hidden\@s {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-hidden\@m {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: $breakpoint-large) {
+
+    .uk-hidden\@l {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: $breakpoint-xlarge) {
+
+    .uk-hidden\@xl {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+
+    .uk-visible\@s {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-small-max) {
+
+    .uk-visible\@m {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-medium-max) {
+
+    .uk-visible\@l {
+        display: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-large-max) {
+
+    .uk-visible\@xl {
+        display: none !important;
+    }
+
+}
+
+.uk-invisible {
+    visibility: hidden !important;
+}
+
+.uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within) {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+.uk-visible-toggle:not(:hover):not(:focus) .uk-invisible-hover:not(:focus-within) {
+    opacity: 0 !important;
+}
+
+.uk-visible-toggle {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.uk-visible-toggle:focus {
+    outline: none;
+}
+
+@media (pointer: coarse) {
+
+    .uk-hidden-touch {
+        display: none !important;
+    }
+
+}
+
+.uk-hidden-notouch {
+    display: none !important;
+}
+
+@media (pointer: coarse) {
+
+    .uk-hidden-notouch {
+        display: block !important;
+    }
+
+}

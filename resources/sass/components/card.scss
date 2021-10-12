@@ -1,0 +1,198 @@
+$card-body-padding-horizontal: $global-gutter !default;
+$card-body-padding-vertical: $global-gutter !default;
+
+$card-body-padding-horizontal-l: $global-medium-gutter !default;
+$card-body-padding-vertical-l: $global-medium-gutter !default;
+
+$card-header-padding-horizontal: $global-gutter !default;
+$card-header-padding-vertical: round($global-gutter / 2) !default;
+
+$card-header-padding-horizontal-l: $global-medium-gutter !default;
+$card-header-padding-vertical-l: round($global-medium-gutter / 2) !default;
+
+$card-footer-padding-horizontal: $global-gutter !default;
+$card-footer-padding-vertical: ($global-gutter / 2) !default;
+
+$card-footer-padding-horizontal-l: $global-medium-gutter !default;
+$card-footer-padding-vertical-l: round($global-medium-gutter / 2) !default;
+
+$card-title-font-size: $global-large-font-size !default;
+$card-title-line-height: 1.4 !default;
+
+$card-badge-top: $global-gutter !default;
+$card-badge-right: $card-badge-top !default;
+
+$card-hover-background: $global-muted-background !default;
+
+$card-default-background: #fff !default;
+$card-default-color: $global-color !default;
+$card-default-title-color: $global-emphasis-color !default;
+$card-default-hover-background: darken($card-default-background, 5%) !default;
+
+$card-small-body-padding-horizontal: $global-margin !default;
+$card-small-body-padding-vertical: $global-margin !default;
+$card-small-header-padding-horizontal: $global-margin !default;
+$card-small-header-padding-vertical: round($global-margin / 1.5) !default;
+$card-small-footer-padding-horizontal: $global-margin !default;
+$card-small-footer-padding-vertical: round($global-margin / 1.5) !default;
+
+$card-large-body-padding-horizontal-l: $global-large-gutter !default;
+$card-large-body-padding-vertical-l: $global-large-gutter !default;
+$card-large-header-padding-horizontal-l: $global-large-gutter !default;
+$card-large-header-padding-vertical-l: round($global-large-gutter / 2) !default;
+$card-large-footer-padding-horizontal-l: $global-large-gutter !default;
+$card-large-footer-padding-vertical-l: round($global-large-gutter / 2) !default;
+
+.uk-card {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.uk-card-body {
+    padding: $card-body-padding-vertical $card-body-padding-horizontal;
+}
+
+.uk-card-header {
+    padding: $card-header-padding-vertical $card-header-padding-horizontal;
+}
+
+.uk-card-footer {
+    padding: $card-footer-padding-vertical $card-footer-padding-horizontal;
+}
+
+@media (min-width: $breakpoint-large) {
+
+    .uk-card-body {
+        padding: $card-body-padding-vertical-l $card-body-padding-horizontal-l;
+    }
+
+    .uk-card-header {
+        padding: $card-header-padding-vertical-l $card-header-padding-horizontal-l;
+    }
+
+    .uk-card-footer {
+        padding: $card-footer-padding-vertical-l $card-footer-padding-horizontal-l;
+    }
+
+}
+
+.uk-card-body::before,
+.uk-card-body::after,
+.uk-card-header::before,
+.uk-card-header::after,
+.uk-card-footer::before,
+.uk-card-footer::after {
+    content: "";
+    display: table;
+}
+
+.uk-card-body::after,
+.uk-card-header::after,
+.uk-card-footer::after {
+    clear: both;
+}
+
+.uk-card-body > :last-child,
+.uk-card-header > :last-child,
+.uk-card-footer > :last-child {
+    margin-bottom: 0;
+}
+
+.uk-card-title {
+    font-size: $card-title-font-size;
+    line-height: $card-title-line-height;
+}
+
+.uk-card-badge {
+    position: absolute;
+    top: $card-badge-top;
+    right: $card-badge-right;
+    z-index: 1;
+}
+
+.uk-card-badge:first-child + * {
+    margin-top: 0;
+}
+
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+    background: $card-hover-background;
+}
+
+.uk-card-default {
+    background: $card-default-background;
+    color: $card-default-color;
+}
+
+.uk-card-default .uk-card-title {
+    color: $card-default-title-color;
+}
+
+.uk-card-default.uk-card-hover:hover {
+    background-color: $card-default-hover-background;
+}
+
+.uk-card-primary {
+    background: $global-primary-background;
+    color: $global-inverse-color!important;
+}
+
+.uk-card-primary a {
+    color: $global-inverse-color!important;
+}
+
+.uk-card-success {
+    background: $global-success-background;
+    color: $global-inverse-color!important;
+}
+
+.uk-card-success a {
+    color: $global-inverse-color!important;
+}
+
+.uk-card-danger {
+    background: $global-danger-background;
+    color: $global-inverse-color!important;
+}
+
+.uk-card-danger a {
+    color: $global-inverse-color!important;
+}
+
+.uk-card-warning {
+    background: $global-warning-background;
+    color: $global-inverse-color!important;
+}
+
+.uk-card-warning a {
+    color: $global-inverse-color!important;
+}
+
+.uk-card-small.uk-card-body,
+.uk-card-small .uk-card-body {
+    padding: $card-small-body-padding-vertical $card-small-body-padding-horizontal;
+}
+
+.uk-card-small .uk-card-header {
+    padding: $card-small-header-padding-vertical $card-small-header-padding-horizontal;
+}
+
+.uk-card-small .uk-card-footer {
+    padding: $card-small-footer-padding-vertical $card-small-footer-padding-horizontal;
+}
+
+@media (min-width: $breakpoint-large) {
+
+    .uk-card-large.uk-card-body,
+    .uk-card-large .uk-card-body {
+        padding: $card-large-body-padding-vertical-l $card-large-body-padding-horizontal-l;
+    }
+
+    .uk-card-large .uk-card-header {
+        padding: $card-large-header-padding-vertical-l $card-large-header-padding-horizontal-l;
+    }
+
+    .uk-card-large .uk-card-footer {
+        padding: $card-large-footer-padding-vertical-l $card-large-footer-padding-horizontal-l;
+    }
+
+}

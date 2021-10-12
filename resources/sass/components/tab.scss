@@ -1,0 +1,149 @@
+$tab-margin-horizontal: 20px !default;
+$tab-item-padding-horizontal: 10px !default;
+$tab-item-padding-vertical: 5px !default;
+$tab-item-color: $global-muted-color !default;
+$tab-item-hover-color: $global-color !default;
+$tab-item-hover-text-decoration: none !default;
+$tab-item-active-color: $global-emphasis-color !default;
+$tab-item-disabled-color: $global-muted-color !default;
+$table-margin-vertical: $global-margin !default;
+$table-cell-padding-vertical: 16px !default;
+$table-cell-padding-horizontal: 12px !default;
+$table-header-cell-font-size: $global-font-size !default;
+$table-header-cell-font-weight: bold !default;
+$table-header-cell-color: $global-color !default;
+$table-footer-font-size: $global-small-font-size !default;
+$table-caption-font-size: $global-small-font-size !default;
+$table-caption-color: $global-muted-color !default;
+$table-row-active-background: #ffd !default;
+$table-divider-border-width: $global-border-width !default;
+$table-divider-border: $global-border !default;
+$table-striped-row-background: $global-muted-background !default;
+$table-hover-row-background: $table-row-active-background !default;
+$table-small-cell-padding-vertical: 10px !default;
+$table-small-cell-padding-horizontal: 12px !default;
+$table-large-cell-padding-vertical: 22px !default;
+$table-large-cell-padding-horizontal: 12px !default;
+$table-expand-min-width: 150px !default;
+
+.uk-tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: (-$tab-margin-horizontal);
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+.uk-tab:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 0;
+    border-bottom: $global-border-width solid $global-border;
+}
+
+.uk-tab > * {
+    flex: none;
+    padding-left: $tab-margin-horizontal;
+    position: relative;
+}
+
+.uk-tab > * > a {
+    display: block;
+    text-align: center;
+    padding: $tab-item-padding-vertical $tab-item-padding-horizontal;
+    color: $tab-item-color;
+    border-bottom: round($global-border-width * 2) solid transparent;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: color 0.1s ease-in-out;
+}
+
+.uk-tab > * > a:hover,
+.uk-tab > * > a:focus {
+    color: $tab-item-hover-color;
+    text-decoration: $tab-item-hover-text-decoration;
+}
+
+.uk-tab > .uk-active > a {
+    color: $tab-item-active-color;
+    border-color: $global-primary-background;
+}
+
+.uk-tab.uk-tab-primary > .uk-active > a {
+    border-color: $global-primary-background;
+}
+
+.uk-tab.uk-tab-success > .uk-active > a {
+    border-color: $global-success-background;
+}
+
+.uk-tab.uk-tab-danger > .uk-active > a {
+    border-color: $global-danger-background;
+}
+
+.uk-tab.uk-tab-warning > .uk-active > a {
+    border-color: $global-warning-background;
+}
+
+.uk-tab > .uk-disabled > a {
+    color: $tab-item-disabled-color;
+}
+
+.uk-tab-bottom:before {
+    top: 0;
+    bottom: auto;
+}
+
+.uk-tab-bottom > * > a {
+    border-top: round($global-border-width * 3) solid transparent;
+    border-bottom: none;
+}
+
+.uk-tab-left,
+.uk-tab-right {
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.uk-tab-left > *,
+.uk-tab-right > * {
+    padding-left: 0;
+}
+
+.uk-tab-left::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    border-left: $global-border-width solid $global-border;
+    border-bottom: none;
+    position: absolute;
+}
+
+.uk-tab-right::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    border-left: $global-border-width solid $global-border;
+    border-bottom: none;
+    position: absolute;
+}
+
+.uk-tab-left > * > a {
+    text-align: left;
+    border-right: round($global-border-width * 3) solid transparent;
+    border-bottom: none;
+}
+
+.uk-tab-right > * > a {
+    text-align: left;
+    border-left: round($global-border-width * 3) solid transparent;
+    border-bottom: none;
+}
+

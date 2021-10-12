@@ -1,0 +1,17 @@
+$overlay-padding-horizontal:                     $global-gutter !default;
+$overlay-padding-vertical:                       $global-gutter !default;
+
+$overlay-default-background:                     rgba($global-background, 0.8) !default;
+
+.uk-overlay {
+    padding: $overlay-padding-vertical $overlay-padding-horizontal;
+}
+
+.uk-overlay > :last-child { margin-bottom: 0; }
+
+.uk-overlay-icon {
+}
+.uk-overlay-default {
+    background: $overlay-default-background;
+}
+

@@ -1,0 +1,100 @@
+$notification-position: 10px !default;
+$notification-z-index: $global-z-index + 40 !default;
+$notification-width: 350px !default;
+$notification-message-margin-bottom: 10px !default;
+$notification-message-padding: $global-small-gutter !default;
+$notification-message-background: $global-muted-background !default;
+$notification-message-color: $global-color !default;
+$notification-message-font-size: 1rem !default;
+$notification-message-line-height: 1.4 !default;
+$notification-close-top: 5px !default;
+$notification-close-right: 5px !default;
+$notification-message-primary-color: $global-primary-background !default;
+$notification-message-success-color: $global-success-background !default;
+$notification-message-warning-color: $global-warning-background !default;
+$notification-message-danger-color: $global-danger-background !default;
+
+.uk-notification {
+    position: fixed;
+    top: $notification-position;
+    left: $notification-position;
+    z-index: $notification-z-index;
+    box-sizing: border-box;
+    width: $notification-width;
+}
+
+.uk-notification-top-right,
+.uk-notification-bottom-right {
+    left: auto;
+    right: $notification-position;
+}
+
+.uk-notification-top-center,
+.uk-notification-bottom-center {
+    left: 50%;
+    margin-left: ($notification-width / -2);
+}
+
+.uk-notification-bottom-left,
+.uk-notification-bottom-right,
+.uk-notification-bottom-center {
+    top: auto;
+    bottom: $notification-position;
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+    .uk-notification {
+        left: $notification-position;
+        right: $notification-position;
+        width: auto;
+        margin: 0;
+    }
+}
+
+
+.uk-notification-message {
+    position: relative;
+    margin-bottom: $notification-message-margin-bottom;
+    padding: $notification-message-padding;
+    background: $notification-message-background;
+    color: $notification-message-color;
+    font-size: $notification-message-font-size;
+    line-height: $notification-message-line-height;
+    cursor: pointer;
+    @extend .uk-border-rounded;
+    @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.08));
+}
+
+.uk-notification-close {
+    display: none;
+    position: absolute;
+    color: #fff !important;
+    top: $notification-close-top;
+    right: $notification-close-right;
+    height: 10px;
+    width: 10px;
+}
+
+.uk-notification-message:hover .uk-notification-close {
+    display: block;
+}
+
+.uk-notification-message-primary {
+    background: $global-primary-background;
+    color: #fff;
+}
+
+.uk-notification-message-success {
+    background: $global-success-background;
+    color: #fff;
+}
+
+.uk-notification-message-warning {
+    background: $global-warning-background;
+    color: #fff;
+}
+
+.uk-notification-message-danger {
+    background: $global-danger-background;
+    color: #fff;
+}

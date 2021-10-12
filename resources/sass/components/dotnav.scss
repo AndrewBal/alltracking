@@ -1,0 +1,62 @@
+$dotnav-margin-horizontal:                       12px !default;
+$dotnav-margin-vertical:                         $dotnav-margin-horizontal !default;
+
+$dotnav-item-width:                              10px !default;
+$dotnav-item-height:                             $dotnav-item-width !default;
+$dotnav-item-border-radius:                      50% !default;
+
+$dotnav-item-background:                         rgba($global-color, 0.2) !default;
+$dotnav-item-hover-background:                   rgba($global-color, 0.6) !default;
+$dotnav-item-onclick-background:                 rgba($global-color, 0.2) !default;
+$dotnav-item-active-background:                  rgba($global-color, 0.6) !default;
+
+.uk-dotnav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: (-$dotnav-margin-horizontal);
+}
+
+.uk-dotnav > * {
+    flex: none;
+    padding-left: $dotnav-margin-horizontal;
+}
+
+.uk-dotnav > * > * {
+    display: block;
+    box-sizing: border-box;
+    width: $dotnav-item-width;
+    height: $dotnav-item-height;
+    border-radius: $dotnav-item-border-radius;
+    background: $dotnav-item-background;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.uk-dotnav > * > :hover,
+.uk-dotnav > * > :focus {
+    background-color: $dotnav-item-hover-background;
+    outline: none;
+}
+
+.uk-dotnav > * > :active {
+    background-color: $dotnav-item-onclick-background;
+}
+
+.uk-dotnav > .uk-active > * {
+    background-color: $dotnav-item-active-background;
+}
+
+.uk-dotnav-vertical {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: (-$dotnav-margin-vertical);
+}
+
+.uk-dotnav-vertical > * {
+    padding-left: 0;
+    padding-top: $dotnav-margin-vertical;
+}

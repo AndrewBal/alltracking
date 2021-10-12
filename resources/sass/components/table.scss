@@ -1,0 +1,196 @@
+$table-margin-vertical: $global-margin !default;
+$table-cell-padding-vertical: 16px !default;
+$table-cell-padding-horizontal: 12px !default;
+$table-header-cell-font-size: $global-font-size !default;
+$table-header-cell-font-weight: bold !default;
+$table-header-cell-color: $global-color !default;
+$table-footer-font-size: $global-small-font-size !default;
+$table-caption-font-size: $global-small-font-size !default;
+$table-caption-color: $global-muted-color !default;
+$table-row-active-background: #d1e7dd !default;
+$table-divider-border-width: $global-border-width !default;
+$table-divider-border: $global-border !default;
+$table-striped-row-background: $global-muted-background !default;
+$table-hover-row-background: $table-row-active-background !default;
+$table-xsmall-cell-padding-vertical: 5px !default;
+$table-xsmall-cell-padding-horizontal: 8px !default;
+$table-small-cell-padding-vertical: 10px !default;
+$table-small-cell-padding-horizontal: 12px !default;
+$table-large-cell-padding-vertical: 22px !default;
+$table-large-cell-padding-horizontal: 12px !default;
+$table-expand-min-width: 150px !default;
+
+.uk-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: $table-margin-vertical;
+}
+
+* + .uk-table {
+    margin-top: $table-margin-vertical;
+}
+
+.uk-table th {
+    padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+    text-align: left;
+    font-size: $table-header-cell-font-size;
+    font-weight: $table-header-cell-font-weight;
+    color: $table-header-cell-color;
+    vertical-align: middle;
+}
+
+.uk-table td {
+    padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+    vertical-align: top;
+}
+
+.uk-table td > :last-child {
+    margin-bottom: 0;
+}
+
+.uk-table tfoot {
+    font-size: $table-footer-font-size;
+}
+
+.uk-table caption {
+    font-size: $table-caption-font-size;
+    text-align: left;
+    color: $table-caption-color;
+}
+
+.uk-table-middle,
+.uk-table-middle td {
+    vertical-align: middle !important;
+}
+
+.uk-table-divider > tr:not(:first-child),
+.uk-table-divider > :not(:first-child) > tr,
+.uk-table-divider > :first-child > tr:not(:first-child) {
+    border-top: $table-divider-border-width solid $table-divider-border;
+}
+
+.uk-table-striped > tr:nth-of-type(odd),
+.uk-table-striped tbody tr:nth-of-type(odd) {
+    background: $table-striped-row-background;
+}
+
+.uk-table-hover tbody tr:hover {
+    background: #f0faf7;
+}
+
+.uk-table > tr.uk-active,
+.uk-table tbody tr.uk-active {
+    background: #f0faf7;
+}
+
+.uk-table-xsmall th,
+.uk-table-xsmall td {
+    padding: $table-xsmall-cell-padding-vertical $table-xsmall-cell-padding-horizontal;
+}
+
+.uk-table-small th,
+.uk-table-small td {
+    padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal;
+}
+
+.uk-table-large th,
+.uk-table-large td {
+    padding: $table-large-cell-padding-vertical $table-large-cell-padding-horizontal;
+}
+
+.uk-table-justify th:first-child,
+.uk-table-justify td:first-child {
+    padding-left: 0;
+}
+
+.uk-table-justify th:last-child,
+.uk-table-justify td:last-child {
+    padding-right: 0;
+}
+
+.uk-table-shrink {
+    width: 1px;
+}
+
+.uk-table-expand {
+    min-width: $table-expand-min-width;
+}
+
+.uk-table-link {
+    padding: 0 !important;
+}
+
+.uk-table-link > a {
+    display: block;
+    padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+}
+
+.uk-table-small .uk-table-link > a {
+    padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal;
+}
+
+.uk-table-bordered th,
+.uk-table-bordered td {
+    border-right: $table-divider-border-width solid $table-divider-border;
+}
+
+.uk-table-bordered th:last-child,
+.uk-table-bordered td:last-child {
+    border-width: 0;
+}
+
+.uk-table-bordered thead {
+    border-bottom: $table-divider-border-width * 2 solid $table-divider-border;
+}
+
+.uk-table-bordered tr {
+    border-bottom: $table-divider-border-width solid $table-divider-border;
+}
+
+.uk-table-bordered tbody tr:last-child {
+    border-width: 0;
+}
+
+@media (max-width: $breakpoint-small-max) {
+
+    .uk-table-responsive,
+    .uk-table-responsive tbody,
+    .uk-table-responsive th,
+    .uk-table-responsive td,
+    .uk-table-responsive tr {
+        display: block;
+    }
+
+    .uk-table-responsive thead {
+        display: none;
+    }
+
+    .uk-table-responsive th,
+    .uk-table-responsive td {
+        width: auto !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        overflow: visible !important;
+        white-space: normal !important;
+    }
+
+    .uk-table-responsive th:not(:first-child):not(.uk-table-link),
+    .uk-table-responsive td:not(:first-child):not(.uk-table-link),
+    .uk-table-responsive .uk-table-link:not(:first-child) > a {
+        padding-top: round($table-cell-padding-vertical / 3) !important;
+    }
+
+    .uk-table-responsive th:not(:last-child):not(.uk-table-link),
+    .uk-table-responsive td:not(:last-child):not(.uk-table-link),
+    .uk-table-responsive .uk-table-link:not(:last-child) > a {
+        padding-bottom: round($table-cell-padding-vertical / 3) !important;
+    }
+
+    .uk-table-justify.uk-table-responsive th,
+    .uk-table-justify.uk-table-responsive td {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}

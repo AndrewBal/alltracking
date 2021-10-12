@@ -1,0 +1,129 @@
+$background-default-background: $global-background !default;
+$background-muted-background: $global-muted-background !default;
+$background-primary-background: $global-primary-background !default;
+$background-success-background: $global-success-background !default;
+$background-warning-background: $global-warning-background !default;
+$background-danger-background: $global-danger-background !default;
+
+.uk-background-default {
+    background-color: $background-default-background !important;
+}
+
+.uk-background-muted {
+    background-color: $background-muted-background !important;
+}
+
+.uk-background-primary {
+    background-color: $background-primary-background !important;
+}
+
+.uk-background-success {
+    background-color: $background-success-background !important;
+}
+
+.uk-background-warning {
+    background-color: $background-warning-background !important;
+}
+
+.uk-background-danger {
+    background-color: $background-danger-background !important;
+}
+
+.uk-background-cover,
+.uk-background-contain {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.uk-background-cover {
+    background-size: cover;
+}
+
+.uk-background-contain {
+    background-size: contain;
+}
+
+.uk-background-top-left {
+    background-position: 0 0;
+}
+
+.uk-background-top-center {
+    background-position: 50% 0;
+}
+
+.uk-background-top-right {
+    background-position: 100% 0;
+}
+
+.uk-background-center-left {
+    background-position: 0 50%;
+}
+
+.uk-background-center-center {
+    background-position: 50% 50%;
+}
+
+.uk-background-center-right {
+    background-position: 100% 50%;
+}
+
+.uk-background-bottom-left {
+    background-position: 0 100%;
+}
+
+.uk-background-bottom-center {
+    background-position: 50% 100%;
+}
+
+.uk-background-bottom-right {
+    background-position: 100% 100%;
+}
+
+.uk-background-norepeat {
+    background-repeat: no-repeat;
+}
+
+.uk-background-fixed {
+    background-attachment: fixed;
+    backface-visibility: hidden;
+}
+
+@media (pointer: coarse) {
+
+    .uk-background-fixed {
+        background-attachment: scroll;
+    }
+
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+
+    .uk-background-image\@s {
+        background-image: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-small-max) {
+
+    .uk-background-image\@m {
+        background-image: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-medium-max) {
+
+    .uk-background-image\@l {
+        background-image: none !important;
+    }
+
+}
+
+@media (max-width: $breakpoint-large-max) {
+
+    .uk-background-image\@xl {
+        background-image: none !important;
+    }
+
+}

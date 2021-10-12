@@ -1,0 +1,163 @@
+$container-max-width: 1200px !default;
+$container-xsmall-max-width: 750px !default;
+$container-small-max-width: 900px !default;
+$container-large-max-width: 1600px !default;
+
+$container-padding-horizontal: 15px !default;
+$container-padding-horizontal-s: $global-gutter !default;
+$container-padding-horizontal-m: $global-medium-gutter !default;
+
+.uk-container {
+    box-sizing: content-box;
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-padding-horizontal;
+    padding-right: $container-padding-horizontal;
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .uk-container {
+        padding-left: $container-padding-horizontal-s;
+        padding-right: $container-padding-horizontal-s;
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-container {
+        padding-left: $container-padding-horizontal-m;
+        padding-right: $container-padding-horizontal-m;
+    }
+
+}
+
+.uk-container::before,
+.uk-container::after {
+    content: "";
+    display: table;
+}
+
+.uk-container::after {
+    clear: both;
+}
+
+.uk-container > :last-child {
+    margin-bottom: 0;
+}
+
+.uk-container .uk-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.uk-container-xsmall {
+    max-width: $container-xsmall-max-width;
+}
+
+.uk-container-small {
+    max-width: $container-small-max-width;
+}
+
+.uk-container-large {
+    max-width: $container-large-max-width;
+}
+
+.uk-container-expand {
+    max-width: none;
+}
+
+.uk-container-expand-left {
+    margin-left: 0;
+}
+
+.uk-container-expand-right {
+    margin-right: 0;
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .uk-container-expand-left.uk-container-xsmall,
+    .uk-container-expand-right.uk-container-xsmall {
+        max-width: unquote('calc(50% + (#{$container-xsmall-max-width} / 2) - #{$container-padding-horizontal-s})');
+    }
+
+    .uk-container-expand-left.uk-container-small,
+    .uk-container-expand-right.uk-container-small {
+        max-width: unquote('calc(50% + (#{$container-small-max-width} / 2) - #{$container-padding-horizontal-s})');
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-container-expand-left,
+    .uk-container-expand-right {
+        max-width: unquote('calc(50% + (#{$container-max-width} / 2) - #{$container-padding-horizontal-m})');
+    }
+
+    .uk-container-expand-left.uk-container-xsmall,
+    .uk-container-expand-right.uk-container-xsmall {
+        max-width: unquote('calc(50% + (#{$container-xsmall-max-width} / 2) - #{$container-padding-horizontal-m})');
+    }
+
+    .uk-container-expand-left.uk-container-small,
+    .uk-container-expand-right.uk-container-small {
+        max-width: unquote('calc(50% + (#{$container-small-max-width} / 2) - #{$container-padding-horizontal-m})');
+    }
+
+    .uk-container-expand-left.uk-container-large,
+    .uk-container-expand-right.uk-container-large {
+        max-width: unquote('calc(50% + (#{$container-large-max-width} / 2) - #{$container-padding-horizontal-m})');
+    }
+
+}
+
+.uk-container-item-padding-remove-left,
+.uk-container-item-padding-remove-right {
+    width: unquote('calc(100% + #{$container-padding-horizontal})')
+}
+
+.uk-container-item-padding-remove-left {
+    margin-left: (-$container-padding-horizontal);
+}
+
+.uk-container-item-padding-remove-right {
+    margin-right: (-$container-padding-horizontal);
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .uk-container-item-padding-remove-left,
+    .uk-container-item-padding-remove-right {
+        width: unquote('calc(100% + #{$container-padding-horizontal-s})')
+    }
+
+    .uk-container-item-padding-remove-left {
+        margin-left: (-$container-padding-horizontal-s);
+    }
+
+    .uk-container-item-padding-remove-right {
+        margin-right: (-$container-padding-horizontal-s);
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-container-item-padding-remove-left,
+    .uk-container-item-padding-remove-right {
+        width: unquote('calc(100% + #{$container-padding-horizontal-m})')
+    }
+
+    .uk-container-item-padding-remove-left {
+        margin-left: (-$container-padding-horizontal-m);
+    }
+
+    .uk-container-item-padding-remove-right {
+        margin-right: (-$container-padding-horizontal-m);
+    }
+
+}

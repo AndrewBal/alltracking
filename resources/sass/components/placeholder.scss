@@ -1,0 +1,15 @@
+$placeholder-margin-vertical:                    $global-margin !default;
+$placeholder-padding-vertical:                   $global-gutter !default;
+$placeholder-padding-horizontal:                 $global-gutter !default;
+$placeholder-background:                         $global-muted-background !default;
+
+.uk-placeholder {
+    margin-bottom: $placeholder-margin-vertical;
+    padding: $placeholder-padding-vertical $placeholder-padding-horizontal;
+    background: $placeholder-background;
+    @if(mixin-exists(hook-placeholder)) {@include hook-placeholder();}
+}
+
+* + .uk-placeholder { margin-top: $placeholder-margin-vertical; }
+
+.uk-placeholder > :last-child { margin-bottom: 0; }

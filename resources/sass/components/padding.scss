@@ -1,0 +1,135 @@
+$padding-padding: $global-gutter !default;
+$padding-xsmall-padding: $global-xsmall-gutter !default;
+$padding-small-padding: $global-small-gutter !default;
+$padding-medium-padding: $global-medium-gutter !default;
+$padding-large-padding: $global-large-gutter !default;
+
+.uk-padding {
+    padding: $padding-padding !important;
+}
+
+.uk-padding-top {
+    padding-top: $padding-padding !important;
+}
+
+.uk-padding-bottom {
+    padding-bottom: $padding-padding !important;
+}
+
+.uk-padding-left {
+    padding-left: $padding-padding !important;
+}
+
+.uk-padding-right {
+    padding-right: $padding-padding !important;
+}
+
+.uk-padding-xsmall {
+    padding: $padding-xsmall-padding !important;
+}
+
+.uk-padding-small {
+    padding: $padding-small-padding !important;
+}
+
+.uk-padding-medium {
+    padding: $padding-small-padding !important;
+}
+
+.uk-padding-large {
+    padding: $padding-large-padding !important;
+}
+
+.uk-padding-xsmall-right {
+    padding-right: $padding-xsmall-padding !important;
+}
+
+.uk-padding-small-right {
+    padding-right: $padding-small-padding !important;
+}
+
+.uk-padding-medium-right {
+    padding-right: $padding-small-padding !important;
+}
+
+.uk-padding-large-right {
+    padding-right: $padding-large-padding !important;
+}
+
+.uk-padding-xsmall-left {
+    padding-left: $padding-xsmall-padding !important;
+}
+
+.uk-padding-small-left {
+    padding-left: $padding-small-padding !important;
+}
+
+.uk-padding-medium-left {
+    padding-left: $padding-small-padding !important;
+}
+
+.uk-padding-large-left {
+    padding-left: $padding-large-padding !important;
+}
+
+.uk-padding-xsmall-top {
+    padding-top: $padding-xsmall-padding !important;
+}
+
+.uk-padding-small-top {
+    padding-top: $padding-small-padding !important;
+}
+
+.uk-padding-medium-top {
+    padding-top: $padding-small-padding !important;
+}
+
+.uk-padding-large-top {
+    padding-top: $padding-large-padding !important;
+}
+
+.uk-padding-xsmall-bottom {
+    padding-bottom: $padding-xsmall-padding !important;
+}
+
+.uk-padding-small-bottom {
+    padding-bottom: $padding-small-padding !important;
+}
+
+.uk-padding-medium-bottom {
+    padding-bottom: $padding-small-padding !important;
+}
+
+.uk-padding-large-bottom {
+    padding-bottom: $padding-large-padding !important;
+}
+
+.uk-padding-remove {
+    padding: 0 !important;
+}
+
+.uk-padding-remove-top {
+    padding-top: 0 !important;
+}
+
+.uk-padding-remove-bottom {
+    padding-bottom: 0 !important;
+}
+
+.uk-padding-remove-left {
+    padding-left: 0 !important;
+}
+
+.uk-padding-remove-right {
+    padding-right: 0 !important;
+}
+
+.uk-padding-remove-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.uk-padding-remove-horizontal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

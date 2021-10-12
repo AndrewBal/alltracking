@@ -1,0 +1,462 @@
+@mixin border-radius($values) {
+    -webkit-border-radius: $values;
+    -moz-border-radius: $values;
+    border-radius: $values;
+}
+
+@mixin box-shadow($values) {
+    -webkit-box-shadow: $values;
+    -moz-box-shadow: $values;
+    box-shadow: $values;
+}
+
+@mixin transform($func) {
+    -webkit-transform: $func;
+    -moz-transform: $func;
+    -ms-transform: $func;
+    -o-transform: $func;
+    transform: $func;
+}
+
+@mixin transition($prop...) {
+    -webkit-transition: $prop;
+    -moz-transition: $prop;
+    -ms-transition: $prop;
+    -o-transition: $prop;
+    transition: $prop;
+}
+
+@mixin appearance($values) {
+    -moz-appearance: $values;
+    -webkit-appearance: $values;
+    appearance: $values;
+}
+
+@mixin animation($values) {
+    -webkit-animation: $values;
+    -moz-animation: $values;
+    animation: $values;
+}
+
+@mixin animation-delay($values) {
+    -webkit-animation-delay: $values;
+    -moz-animation-delay: $values;
+    -o-animation-delay: $values;
+    animation-delay: $values;
+}
+
+@mixin opacity($values) {
+    filter: alpha(opacity=$values*100);
+    -moz-opacity: $values;
+    -khtml-opacity: $values;
+    opacity: $values;
+}
+
+@mixin text-overflow($values) {
+    text-overflow: $values;
+    -o-text-overflow: $values;
+    -ms-text-overflow: $values;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content
+    }
+    @-moz-keyframes #{$name} {
+        @content
+    }
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin media($min, $max) {
+    @if $min==0 {
+        @media only screen and (max-width: #{$max}px) {
+            @content;
+        }
+    } @else if $max==0 {
+        @media only screen and (min-width: #{$min}px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: #{$min}px) and (max-width: #{$max}px) {
+            @content;
+        }
+    }
+}
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
+}
+
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes horizontal {
+    0% {
+        transform: translate(0, 0)
+    }
+    6.97675% {
+        transform: translate(5px, 0)
+    }
+    13.95349% {
+        transform: translate(0, 0)
+    }
+    20.93023% {
+        transform: translate(5px, 0)
+    }
+    27.90698% {
+        transform: translate(0, 0)
+    }
+    34.88372% {
+        transform: translate(5px, 0)
+    }
+    41.86047% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+@-ms-keyframes horizontal {
+    0% {
+        transform: translate(0, 0)
+    }
+    6.97675% {
+        transform: translate(5px, 0)
+    }
+    13.95349% {
+        transform: translate(0, 0)
+    }
+    20.93023% {
+        transform: translate(5px, 0)
+    }
+    27.90698% {
+        transform: translate(0, 0)
+    }
+    34.88372% {
+        transform: translate(5px, 0)
+    }
+    41.86047% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+@-moz-keyframes horizontal {
+    0% {
+        transform: translate(0, 0)
+    }
+    6.97675% {
+        transform: translate(5px, 0)
+    }
+    13.95349% {
+        transform: translate(0, 0)
+    }
+    20.93023% {
+        transform: translate(5px, 0)
+    }
+    27.90698% {
+        transform: translate(0, 0)
+    }
+    34.88372% {
+        transform: translate(5px, 0)
+    }
+    41.86047% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+@-webkit-keyframes horizontal {
+    0% {
+        transform: translate(0, 0)
+    }
+    6.97675% {
+        transform: translate(5px, 0)
+    }
+    13.95349% {
+        transform: translate(0, 0)
+    }
+    20.93023% {
+        transform: translate(5px, 0)
+    }
+    27.90698% {
+        transform: translate(0, 0)
+    }
+    34.88372% {
+        transform: translate(5px, 0)
+    }
+    41.86047% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+@keyframes double-flash {
+    0% {
+        opacity: 1
+    }
+    16.66667% {
+        opacity: 0
+    }
+    33.33333% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    66.66667% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-ms-keyframes double-flash {
+    0% {
+        opacity: 1
+    }
+    16.66667% {
+        opacity: 0
+    }
+    33.33333% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    66.66667% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes double-flash {
+    0% {
+        opacity: 1
+    }
+    16.66667% {
+        opacity: 0
+    }
+    33.33333% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    66.66667% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes double-flash {
+    0% {
+        opacity: 1
+    }
+    16.66667% {
+        opacity: 0
+    }
+    33.33333% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    66.66667% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+    7.69231% {
+        transform: translateY(0)
+    }
+    15.38462% {
+        transform: translateY(0)
+    }
+    30.76923% {
+        transform: translateY(-15px)
+    }
+    38.46154% {
+        transform: translateY(0)
+    }
+    46.15385% {
+        transform: translateY(-15px)
+    }
+    61.53846% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@-ms-keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+    7.69231% {
+        transform: translateY(0)
+    }
+    15.38462% {
+        transform: translateY(0)
+    }
+    30.76923% {
+        transform: translateY(-15px)
+    }
+    38.46154% {
+        transform: translateY(0)
+    }
+    46.15385% {
+        transform: translateY(-15px)
+    }
+    61.53846% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@-moz-keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+    7.69231% {
+        transform: translateY(0)
+    }
+    15.38462% {
+        transform: translateY(0)
+    }
+    30.76923% {
+        transform: translateY(-15px)
+    }
+    38.46154% {
+        transform: translateY(0)
+    }
+    46.15385% {
+        transform: translateY(-15px)
+    }
+    61.53846% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+    7.69231% {
+        transform: translateY(0)
+    }
+    15.38462% {
+        transform: translateY(0)
+    }
+    30.76923% {
+        transform: translateY(-15px)
+    }
+    38.46154% {
+        transform: translateY(0)
+    }
+    46.15385% {
+        transform: translateY(-15px)
+    }
+    61.53846% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}

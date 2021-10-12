@@ -1,0 +1,12 @@
+$close-color: $global-color;
+$close-hover-color: $global-muted-color;
+
+.uk-close {
+    color: $close-color;
+}
+
+.uk-close:hover,
+.uk-close:focus {
+    color: $close-hover-color;
+    outline: none;
+}

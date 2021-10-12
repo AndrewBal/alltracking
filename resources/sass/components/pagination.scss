@@ -1,0 +1,41 @@
+$pagination-margin-horizontal: 20px !default;
+$pagination-item-color: $global-muted-color !default;
+$pagination-item-hover-color: $global-color !default;
+$pagination-item-hover-text-decoration: none !default;
+$pagination-item-active-color: $global-primary-background !default;
+$pagination-item-disabled-color: $global-muted-color !default;
+
+.uk-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: (-$pagination-margin-horizontal);
+    padding: 0;
+    list-style: none;
+    font-size: 1.2em;
+}
+
+.uk-pagination > * {
+    flex: none;
+    padding-left: $pagination-margin-horizontal;
+    position: relative;
+}
+
+.uk-pagination > * > * {
+    display: block;
+    color: $pagination-item-color;
+}
+
+.uk-pagination > * > :hover,
+.uk-pagination > * > :focus {
+    color: $pagination-item-hover-color;
+    text-decoration: $pagination-item-hover-text-decoration;
+}
+
+.uk-pagination > .uk-active > * {
+    color: $pagination-item-active-color;
+}
+
+.uk-pagination > .uk-disabled > * {
+    color: $pagination-item-disabled-color;
+}
+

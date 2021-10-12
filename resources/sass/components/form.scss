@@ -1,0 +1,491 @@
+$form-height: $global-control-height !default;
+$form-line-height: $form-height !default;
+$form-padding-horizontal: 10px !default;
+$form-padding-vertical: 4px !default;
+
+$form-background: #fff !default;
+$form-color: $global-color !default;
+
+$form-focus-background: $global-muted-background !default;
+$form-focus-color: $global-color !default;
+
+$form-disabled-background: $global-muted-background !default;
+$form-disabled-color: $global-muted-color !default;
+
+$form-placeholder-color: $global-muted-color !default;
+
+$form-small-height: $global-control-small-height !default;
+$form-small-padding-horizontal: 8px !default;
+$form-small-line-height: $form-small-height !default;
+$form-small-font-size: $global-small-font-size !default;
+
+$form-large-height: $global-control-large-height !default;
+$form-large-padding-horizontal: 12px !default;
+$form-large-line-height: $form-large-height !default;
+$form-large-font-size: $global-medium-font-size !default;
+
+$form-danger-color: $global-danger-background !default;
+$form-success-color: $global-success-background !default;
+
+$form-width-xsmall: 50px !default;
+$form-width-small: 130px !default;
+$form-width-medium: 200px !default;
+$form-width-large: 500px !default;
+
+$form-select-padding-right: 20px !default;
+$form-select-icon-color: $global-color !default;
+$form-select-option-color: #444 !default;
+$form-select-disabled-icon-color: $global-muted-color !default;
+
+$form-datalist-padding-right: 20px !default;
+$form-datalist-icon-color: $global-color !default;
+
+$form-radio-size: 20px !default;
+$form-radio-margin-top: -4px !default;
+$form-radio-background: darken($global-muted-background, 5%) !default;
+
+$form-checkbox-checked-background: $global-inverse-color !default;
+$form-checkbox-checked-icon-color: $global-primary-background !default;
+
+$form-radio-checked-background: $global-inverse-color!default;
+$form-radio-checked-icon-color: $global-primary-background!default;
+
+$form-radio-checked-focus-background: darken($global-primary-background, 10%) !default;
+
+$form-radio-disabled-background: $global-muted-background !default;
+$form-radio-disabled-icon-color: $global-muted-color !default;
+
+$form-legend-font-size: $global-large-font-size !default;
+$form-legend-line-height: 1.4 !default;
+
+$form-stacked-margin-bottom: $global-small-margin !default;
+
+$form-horizontal-label-width: 200px !default;
+$form-horizontal-label-margin-top: 7px !default;
+$form-horizontal-controls-margin-left: 215px !default;
+$form-horizontal-controls-text-padding-top: 7px !default;
+
+$form-icon-width: $form-height !default;
+$form-icon-color: $global-muted-color !default;
+$form-icon-hover-color: $global-color !default;
+
+$internal-form-select-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A" !default;
+$internal-form-datalist-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A" !default;
+$internal-form-radio-image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18pt' height='18pt' viewBox='0 0 18 18' version='1.1'%3E%3Cpath fill='#000' d='M 9 16.226562 C 10.972656 16.226562 12.667969 15.515625 14.089844 14.089844 C 15.515625 12.667969 16.226562 10.972656 16.226562 9 C 16.226562 7.027344 15.515625 5.332031 14.089844 3.910156 C 12.667969 2.484375 10.972656 1.773438 9 1.773438 C 7.027344 1.773438 5.332031 2.484375 3.910156 3.910156 C 2.484375 5.332031 1.773438 7.027344 1.773438 9 C 1.773438 10.972656 2.484375 12.667969 3.910156 14.089844 C 5.332031 15.515625 7.027344 16.226562 9 16.226562 Z M 9 0 C 11.480469 0 13.597656 0.878906 15.359375 2.640625 C 17.121094 4.402344 18 6.519531 18 9 C 18 11.480469 17.121094 13.597656 15.359375 15.359375 C 13.597656 17.121094 11.480469 18 9 18 C 6.519531 18 4.402344 17.121094 2.640625 15.359375 C 0.878906 13.597656 0 11.480469 0 9 C 0 6.519531 0.878906 4.402344 2.640625 2.640625 C 4.402344 0.878906 6.519531 0 9 0 Z M 9 4.480469 C 10.238281 4.480469 11.304688 4.921875 12.191406 5.808594 C 13.078125 6.695312 13.519531 7.761719 13.519531 9 C 13.519531 10.238281 13.078125 11.304688 12.191406 12.191406 C 11.304688 13.078125 10.238281 13.519531 9 13.519531 C 7.761719 13.519531 6.695312 13.078125 5.808594 12.191406 C 4.921875 11.304688 4.480469 10.238281 4.480469 9 C 4.480469 7.761719 4.921875 6.695312 5.808594 5.808594 C 6.695312 4.921875 7.761719 4.480469 9 4.480469 Z M 9 4.480469 '/%3E%3C/svg%3E%0A" !default;
+$internal-form-checkbox-image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16pt' height='16pt' viewBox='0 0 16 16' version='1.1'%3E%3Cpath fill='#000' d='M 6.207031 12.457031 L 14.207031 4.457031 L 12.957031 3.167969 L 6.207031 9.917969 L 3.042969 6.75 L 1.792969 8 Z M 14.207031 0 C 14.707031 0 15.132812 0.171875 15.480469 0.519531 C 15.828125 0.867188 16 1.292969 16 1.792969 L 16 14.207031 C 16 14.707031 15.828125 15.132812 15.480469 15.480469 C 15.132812 15.828125 14.707031 16 14.207031 16 L 1.792969 16 C 1.292969 16 0.867188 15.828125 0.519531 15.480469 C 0.171875 15.132812 0 14.707031 0 14.207031 L 0 1.792969 C 0 1.292969 0.171875 0.867188 0.519531 0.519531 C 0.867188 0.171875 1.292969 0 1.792969 0 Z M 14.207031 0 '/%3E%3C/svg%3E" !default;
+$internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E" !default;
+
+.uk-input,
+.uk-select,
+.uk-textarea,
+.uk-radio,
+.uk-checkbox {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+}
+
+.uk-input {
+    overflow: visible;
+}
+
+.uk-select {
+    text-transform: none;
+}
+
+.uk-select optgroup {
+    font: inherit;
+    font-weight: bold;
+}
+
+.uk-textarea {
+    overflow: auto;
+}
+
+.uk-input[type="search"]::-webkit-search-cancel-button,
+.uk-input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.uk-input[type="number"]::-webkit-inner-spin-button,
+.uk-input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+.uk-input::-moz-placeholder,
+.uk-textarea::-moz-placeholder {
+    opacity: 1;
+}
+
+.uk-radio:not(:disabled),
+.uk-checkbox:not(:disabled) {
+    cursor: pointer;
+}
+
+.uk-fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.uk-input,
+.uk-textarea {
+    -webkit-appearance: none;
+}
+
+.uk-input,
+.uk-select,
+.uk-textarea {
+    max-width: 100%;
+    width: 100%;
+    border: 1px #e4e9f0 solid;
+    padding: 0 $form-padding-horizontal;
+    background: $form-background;
+    color: $form-color;
+    border-radius: $border-rounded-border-radius;
+}
+
+.uk-input,
+.uk-select:not([multiple]):not([size]) {
+    height: $form-height;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.uk-input:not(input),
+.uk-select:not(select) {
+    line-height: $form-line-height;
+}
+
+.uk-select[multiple],
+.uk-select[size],
+.uk-textarea {
+    padding-top: $form-padding-vertical;
+    padding-bottom: $form-padding-vertical;
+    vertical-align: top;
+}
+
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+    outline: none;
+    border-color: $global-primary-background;
+    color: $form-focus-color;
+    box-shadow: 0 0 0 0.25rem rgb(30 135 240 / 25%);
+}
+
+.uk-input:disabled,
+.uk-select:disabled,
+.uk-textarea:disabled {
+    background-color: $form-disabled-background;
+    color: $form-disabled-color;
+}
+
+.uk-input::-ms-input-placeholder {
+    color: $form-placeholder-color !important;
+}
+
+.uk-input::placeholder {
+    color: $form-placeholder-color;
+}
+
+.uk-textarea::-ms-input-placeholder {
+    color: $form-placeholder-color !important;
+}
+
+.uk-textarea::placeholder {
+    color: $form-placeholder-color;
+}
+
+.uk-form-danger::-ms-input-placeholder,
+.form-field-error::-ms-input-placeholder {
+    color: lighten($form-danger-color, 10%) !important;
+}
+
+.uk-form-danger::placeholder,
+.form-field-error::placeholder {
+    color: lighten($form-danger-color, 10%);
+}
+
+.uk-form-small {
+    font-size: $form-small-font-size;
+}
+
+.uk-form-small:not(textarea):not([multiple]):not([size]) {
+    height: $form-small-height;
+    padding-left: $form-small-padding-horizontal;
+    padding-right: $form-small-padding-horizontal;
+}
+
+.uk-form-small:not(select):not(input):not(textarea) {
+    line-height: $form-small-line-height;
+}
+
+.uk-form-large {
+    font-size: $form-large-font-size;
+}
+
+.uk-form-large:not(textarea):not([multiple]):not([size]) {
+    height: $form-large-height;
+    padding-left: $form-large-padding-horizontal;
+    padding-right: $form-large-padding-horizontal;
+}
+
+.uk-form-large:not(select):not(input):not(textarea) {
+    line-height: $form-large-line-height;
+}
+
+.form-field-error,
+.form-field-error:focus,
+.uk-form-danger,
+.uk-form-danger:focus {
+    color: $form-danger-color;
+    border-color: $form-danger-color;
+    box-shadow: 0 0 0 0.25rem rgb(240 80 110 / 25%);
+}
+
+.uk-form-success,
+.uk-form-success:focus {
+    color: $form-success-color;
+}
+
+.uk-form-blank {
+    background: none;
+}
+
+input.uk-form-width-xsmall {
+    width: $form-width-xsmall;
+}
+
+select.uk-form-width-xsmall {
+    width: ($form-width-xsmall + 25px);
+}
+
+.uk-form-width-small {
+    width: $form-width-small;
+}
+
+.uk-form-width-medium {
+    width: $form-width-medium;
+}
+
+.uk-form-width-large {
+    width: $form-width-large;
+}
+
+.uk-select:not([multiple]):not([size]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: $form-select-padding-right;
+    @include svg-fill($internal-form-select-image, "#000", $form-select-icon-color);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.uk-select:not([multiple]):not([size])::-ms-expand {
+    display: none;
+}
+
+.uk-select:not([multiple]):not([size]) option {
+    color: $form-select-option-color;
+}
+
+.uk-select:not([multiple]):not([size]):disabled {
+    @include svg-fill($internal-form-select-image, "#000", $form-select-disabled-icon-color);
+}
+
+.uk-input[list] {
+    padding-right: $form-datalist-padding-right;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.uk-input[list]:hover,
+.uk-input[list]:focus {
+    @include svg-fill($internal-form-datalist-image, "#000", $form-datalist-icon-color);
+}
+
+.uk-input[list]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.uk-radio,
+.uk-checkbox {
+    display: inline-block;
+    height: $form-radio-size;
+    width: $form-radio-size;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 3px;
+    border: 1px #e4e9f0 solid;
+    margin: -2px 5px 0 0;
+    background-size: cover;
+}
+
+.uk-radio {
+    border-radius: 50%;
+}
+
+.uk-radio:focus,
+.uk-checkbox:focus {
+    outline: none;
+}
+
+.uk-radio:checked,
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate {
+    background-color: $form-radio-checked-background;
+}
+
+.uk-radio:checked:focus,
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+    //background-color: $form-radio-checked-focus-background;
+}
+
+.uk-radio:checked {
+    @include svg-fill($internal-form-radio-image, "#000", $form-radio-checked-icon-color);
+    border-color: $form-radio-checked-icon-color;
+}
+
+.uk-checkbox:checked {
+    @include svg-fill($internal-form-checkbox-image, "#000", $form-checkbox-checked-icon-color);
+    border-color: $form-checkbox-checked-icon-color;
+}
+
+.uk-checkbox:indeterminate {
+    @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-checked-icon-color);
+}
+
+.uk-radio:disabled,
+.uk-checkbox:disabled {
+    background-color: $form-radio-disabled-background;
+}
+
+.uk-radio:focus,
+.uk-checkbox:focus {
+    box-shadow: 0 0 0 0.15rem rgb(30 135 240 / 25%);
+}
+
+.uk-radio:disabled:checked {
+    @include svg-fill($internal-form-radio-image, "#000", $form-radio-disabled-icon-color);
+}
+
+.uk-checkbox:disabled:checked {
+    @include svg-fill($internal-form-checkbox-image, "#000", $form-radio-disabled-icon-color);
+}
+
+.uk-checkbox:disabled:indeterminate {
+    @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-disabled-icon-color);
+}
+
+.uk-radio + span,
+.uk-checkbox + span {
+    cursor: pointer;
+}
+
+.uk-legend {
+    width: 100%;
+    color: inherit;
+    padding: 0;
+    font-size: $form-legend-font-size;
+    line-height: $form-legend-line-height;
+}
+
+.uk-form-custom {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.uk-form-custom select,
+.uk-form-custom input[type="file"] {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.uk-form-custom input[type="file"] {
+    font-size: 500px;
+    overflow: hidden;
+}
+
+.uk-form-stacked .uk-form-label {
+    display: block;
+    margin-bottom: $form-stacked-margin-bottom;
+}
+
+@media (max-width: $breakpoint-small-max) {
+
+    .uk-form-horizontal .uk-form-label {
+        display: block;
+        margin-bottom: $form-stacked-margin-bottom;
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-form-horizontal .uk-form-label {
+        width: $form-horizontal-label-width;
+        margin-top: $form-horizontal-label-margin-top;
+        float: left;
+    }
+
+    .uk-form-horizontal .uk-form-controls {
+        margin-left: $form-horizontal-controls-margin-left;
+    }
+
+    .uk-form-horizontal .uk-form-controls-text {
+        padding-top: $form-horizontal-controls-text-padding-top;
+    }
+
+}
+
+.uk-form-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $form-icon-width;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $form-icon-color;
+}
+
+.uk-form-icon:hover {
+    color: $form-icon-hover-color;
+}
+
+.uk-form-icon:not(a):not(button):not(input) {
+    pointer-events: none;
+}
+
+.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input {
+    padding-left: $form-icon-width !important;
+}
+
+.uk-form-icon-flip {
+    right: 0;
+    left: auto;
+}
+
+.uk-form-icon-flip ~ .uk-input {
+    padding-right: $form-icon-width !important;
+}
+
+.uk-input-number-spin-hide::-webkit-inner-spin-button,.uk-input-number-spin-hide::-webkit-outer-spin-button{-webkit-appearance:none}

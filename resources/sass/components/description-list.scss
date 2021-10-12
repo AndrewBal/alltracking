@@ -1,0 +1,28 @@
+$description-list-term-color: $global-emphasis-color !default;
+$description-list-term-margin-top: $global-margin !default;
+
+$description-list-divider-term-margin-top: $global-margin !default;
+$description-list-divider-term-border-width: $global-border-width !default;
+$description-list-divider-term-border: $global-border !default;
+
+.uk-description-list > dt {
+    color: $description-list-term-color;
+    text-transform: uppercase;
+    margin-bottom: $global-small-gutter;
+}
+
+.uk-description-list > dt:nth-child(n+2) {
+    margin-top: $description-list-term-margin-top;
+}
+
+.uk-description-list-divider > dt:nth-child(n+2) {
+    margin-top: $description-list-divider-term-margin-top;
+    padding-top: $description-list-divider-term-margin-top;
+    border-top: $description-list-divider-term-border-width solid $description-list-divider-term-border;
+}
+
+.uk-description-horizontal > dt {
+    float: left;
+    clear: both;
+    margin-right: 15px;
+}

@@ -1,0 +1,41 @@
+$slidenav-padding-vertical:                      5px !default;
+$slidenav-padding-horizontal:                    10px !default;
+
+$slidenav-color:                                 rgba($global-color, 0.5) !default;
+$slidenav-hover-color:                           rgba($global-color, 0.9) !default;
+$slidenav-active-color:                          rgba($global-color, 0.5) !default;
+
+$slidenav-large-padding-vertical:                10px !default;
+$slidenav-large-padding-horizontal:              $slidenav-large-padding-vertical !default;
+
+
+.uk-slidenav {
+    padding: $slidenav-padding-vertical $slidenav-padding-horizontal;
+    color: $slidenav-color;
+}
+
+.uk-slidenav:hover,
+.uk-slidenav:focus {
+    color: $slidenav-hover-color;
+    outline: none;
+}
+
+.uk-slidenav:active {
+    color: $slidenav-active-color;
+}
+
+
+.uk-slidenav-previous {
+}
+
+.uk-slidenav-next {
+}
+
+.uk-slidenav-large {
+    padding: $slidenav-large-padding-vertical $slidenav-large-padding-horizontal;
+}
+
+
+.uk-slidenav-container {
+    display: flex;
+}

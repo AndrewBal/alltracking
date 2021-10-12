@@ -1,0 +1,173 @@
+$height-xxsmall-height: 30px !default;
+$height-xsmall-height: 75px !default;
+$height-small-height: 150px !default;
+$height-medium-height: 300px !default;
+$height-large-height: 450px !default;
+
+[class*='uk-height'] {
+    box-sizing: border-box;
+}
+
+.uk-height-1-1 {
+    height: 100%;
+}
+
+.uk-height-viewport {
+    min-height: 100vh;
+}
+
+.uk-height-xxsmall {
+    height: $height-xxsmall-height;
+}
+
+.uk-height-xsmall {
+    height: $height-xsmall-height;
+}
+
+.uk-height-small {
+    height: $height-small-height;
+}
+
+.uk-height-medium {
+    height: $height-medium-height;
+}
+
+.uk-height-large {
+    height: $height-large-height;
+}
+
+.uk-height-max-xxsmall {
+    max-height: $height-xxsmall-height;
+}
+
+.uk-height-max-xsmall {
+    max-height: $height-xsmall-height;
+}
+
+.uk-height-max-small {
+    max-height: $height-small-height;
+}
+
+.uk-height-max-medium {
+    max-height: $height-medium-height;
+}
+
+.uk-height-max-large {
+    max-height: $height-large-height;
+}
+
+.uk-height-min-xxsmall {
+    min-height: $height-xxsmall-height;
+}
+
+.uk-height-min-xsmall {
+    min-height: $height-xsmall-height;
+}
+
+.uk-height-min-small {
+    min-height: $height-small-height;
+}
+
+.uk-height-min-medium {
+    min-height: $height-medium-height;
+}
+
+.uk-height-min-large {
+    min-height: $height-large-height;
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .uk-height-xxsmall\@s {
+        height: $height-xxsmall-height;
+    }
+
+    .uk-height-xsmall\@s {
+        height: $height-xsmall-height;
+    }
+
+    .uk-height-small\@s {
+        height: $height-small-height;
+    }
+
+    .uk-height-medium\@s {
+        height: $height-medium-height;
+    }
+
+    .uk-height-large\@s {
+        height: $height-large-height;
+    }
+
+}
+
+@media (min-width: $breakpoint-medium) {
+
+    .uk-height-xxsmall\@m {
+        height: $height-xxsmall-height;
+    }
+
+    .uk-height-xsmall\@m {
+        height: $height-xsmall-height;
+    }
+
+    .uk-height-small\@m {
+        height: $height-small-height;
+    }
+
+    .uk-height-medium\@m {
+        height: $height-medium-height;
+    }
+
+    .uk-height-large\@m {
+        height: $height-large-height;
+    }
+
+}
+
+@media (min-width: $breakpoint-large) {
+
+    .uk-height-xxsmall\@l {
+        height: $height-xxsmall-height;
+    }
+
+    .uk-height-xsmall\@l {
+        height: $height-xsmall-height;
+    }
+
+    .uk-height-small\@l {
+        height: $height-small-height;
+    }
+
+    .uk-height-medium\@l {
+        height: $height-medium-height;
+    }
+
+    .uk-height-large\@l {
+        height: $height-large-height;
+    }
+
+}
+
+@media (min-width: $breakpoint-xlarge) {
+
+    .uk-height-xxsmall\@xl {
+        height: $height-xxsmall-height;
+    }
+
+    .uk-height-xsmall\@xl {
+        height: $height-xsmall-height;
+    }
+
+    .uk-height-small\@xl {
+        height: $height-small-height;
+    }
+
+    .uk-height-medium\@xl {
+        height: $height-medium-height;
+    }
+
+    .uk-height-large\@xl {
+        height: $height-large-height;
+    }
+
+}
